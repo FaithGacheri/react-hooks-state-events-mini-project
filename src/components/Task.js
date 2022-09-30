@@ -1,11 +1,12 @@
 import React from "react";
+import CategoryFilter from "./CategoryFilter";
 
-function Task() {
+function Task({text,category,removeItem}) {
   return (
     <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
+      <button onClick={()=>removeItem(text)}  className="delete"></button>
     </div>
   );
 }
